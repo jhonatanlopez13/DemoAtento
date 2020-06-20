@@ -1,23 +1,21 @@
 <?php
 
-function cargarPr(){
+function cargarOf(){
     $consulta = new Consulta();
-    $result = $consulta->cargarProductos();
+    $result = $consulta->cargarOfertas();
 
     if(!isset($result)){
         echo '
         <div class="bienvenida">
-         <h1> No hay Centros registrados</h1>
+         <h1> No hay Ofertas registradas</h1>
          </div>';
     }else{
         echo '
         <table class="table table-bordered table-hover tablita">
             <thead>
                 <tr>
-                    <th>Id Producto</th>
+                    <th>Id Oferta</th>
                     <th>Nombre</th>
-                    <th>Peso</th>
-                    <th>Costo</th>
                     <th>Editar</th>
                     <th>Desactivar</th>
                 </tr>
@@ -28,12 +26,10 @@ function cargarPr(){
         foreach($result as $farray){
             echo '
             <tr>
-                <td>'.$farray["id_producto"].'</td>
+                <td>'.$farray["id_oferta"].'</td>
                 <td>'.$farray["nombre"].'</td>
-                <td>'.$farray["peso"].'</td>
-                <td>'.$farray["costo"].'</td>
-                <td><a href="editarProducto.php?id_producto='.$farray["id_producto"].'" class="fa fa-pencil">editar</a></td>
-                <td><a href="../../controller/admin/eliminarProducto.php?id_productoE='.$farray["id_producto"].'" class="fa fa-trash">Eliminar</a></td>
+                <td><a href="editarOferta.php?id_oferta='.$farray["id_oferta"].'" class="fa fa-pencil">editar</a></td>
+                <td><a href="../../controller/admin/eliminarOferta.php?id_ofertaE='.$farray["id_oferta"].'" class="fa fa-trash">Eliminar</a></td>
                  
             </tr>
             ';

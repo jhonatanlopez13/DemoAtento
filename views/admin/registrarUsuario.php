@@ -1,92 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
-<head>
-<meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Login | jeweler - Material Admin Template</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style2.css">
-    <!-- favicon
-		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <!-- Google Fonts
-		============================================ -->
-    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- owl.carousel CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.transitions.css">
-    <!-- animate CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- normalize CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- main CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- morrisjs CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/morrisjs/morris.css">
-    <!-- mCustomScrollbar CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
-    <!-- metisMenu CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
-    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
-    <!-- calendar CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
-    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
-    <!-- forms CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/form/all-type-forms.css">
-    <!-- style CSS
-		============================================ -->
-    <link rel="stylesheet" href="style.css">
-    <!-- responsive CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- modernizr JS
-		============================================ -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-
-<!-- <link rel="stylesheet" href="css/style2.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
-</head>
-<body>
-  
-   <!-- Cabecera y menu -->
-<header id="header-home">
-  <div class="hero">
-    <div class="container-fluid">
-      <div class="container-log">
-        <div class="row-back">
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                  <div class="col-md-1">
-                      <a href="index.html">
-                          <img width="300" height="200" src="img/logo/logoatento.png" alt="logo de la pagina">
-                      </a>
-                  </div>
-              </div>  
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <div class="back-link back-backend">
-                      <a href="index.php" class="btn btn-primary">INICIO</a>
-                  </div>
-              </div>
-        </div>
-        
-        <?php
+<?php
 require_once "../../model/conexion.php";
 require_once "../../model/consulta.php";
 require_once "../../controller/admin/cargarUsuario.php";
@@ -872,6 +784,9 @@ require_once "../../model/seguridad.php";
                             <button class="btn btn-default">Cancel</button>
                         </div>
                     </form>
+
+                    
+                   
                 </div>
             </div>
         </div>

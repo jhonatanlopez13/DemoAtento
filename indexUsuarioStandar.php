@@ -1,9 +1,10 @@
 <?php
-require_once "../../model/conexion.php";
-require_once "../../model/consulta.php";
-require_once "../../controller/admin/cargarRuta.php";
-require_once "../../controller/admin/verPerfil.php";
-require_once "../../model/seguridad.php";
+// require_once "../../model/conexion.php";
+// require_once "../../model/consulta.php";
+// //require_once "../../controller/admin/cargarUsuario.php";
+// require_once "../../controller/admin/verPerfil.php";
+
+// require_once "../../model/seguridad.php";
 
 ?>
 <!doctype html>
@@ -20,60 +21,83 @@ require_once "../../model/seguridad.php";
         <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
         <!-- Google Fonts
             ============================================ -->
-        <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
         <!-- Bootstrap CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <!-- Bootstrap CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         <!-- owl.carousel CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/owl.carousel.css">
-        <link rel="stylesheet" href="../../css/owl.theme.css">
-        <link rel="stylesheet" href="../../css/owl.transitions.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/owl.transitions.css">
         <!-- animate CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/animate.css">
+        <link rel="stylesheet" href="css/animate.css">
         <!-- normalize CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="css/normalize.css">
         <!-- meanmenu icon CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/meanmenu.min.css">
+        <link rel="stylesheet" href="css/meanmenu.min.css">
         <!-- main CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="css/main.css">
         <!-- morrisjs CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/morrisjs/morris.css">
+        <link rel="stylesheet" href="css/morrisjs/morris.css">
         <!-- mCustomScrollbar CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/scrollbar/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
         <!-- metisMenu CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/metisMenu/metisMenu.min.css">
-        <link rel="stylesheet" href="../../css/metisMenu/metisMenu-vertical.css">
+        <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+        <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
         <!-- calendar CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/calendar/fullcalendar.min.css">
-        <link rel="stylesheet" href="../../css/calendar/fullcalendar.print.min.css">
+        <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
+        <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
         <!-- style CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="css/style.css">
         <!-- responsive CSS
             ============================================ -->
-        <link rel="stylesheet" href="../../css/responsive.css">
+        <link rel="stylesheet" href="css/responsive.css">
         <!-- modernizr JS
             ============================================ -->
         <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         
-
-<?php include('../../includes/menulateralsuper.php') ?>
-
-
+        <!-- Menu lateral -->
+         <!-- <div class="left-sidebar-pro">
+            <nav id="sidebar" class="">
+                <div class="sidebar-header">
+                    <a href="index.html"><img width="150px" height="100px" class="main-logo" src="../../img/logo/logo.png" alt="" /></a>
+                    <strong><img src="../../img/logo/logo.png" alt="" /></strong>
+                </div>
+                <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                    <nav class="sidebar-nav left-sidebar-menu-pro">
+                        <ul class="metismenu" id="menu1">
+                            <li class="active">
+                                <a class="has-arrow" href="registrar-usuario-admin.php">
+                                    <i class="fa fa-users"></i>
+                                    <span class="mini-click-non">USUARIOS</span>
+                                    </a>
+                                <ul class="submenu-angle" aria-expanded="true">
+                                    <li><a title="Dashboard v.1" href="registrar-usuario-admin.php"><i class="fa fa-edit" aria-hidden="true"></i> <span class="mini-sub-pro">REGISTRAR</span></a></li>
+                                    <li><a title="Dashboard v.2" href="ver-usuarios-admin.php"><i class="fa fa-eye nav-icon" aria-hidden="true"></i> <span class="mini-sub-pro">VER</span></a></li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div> -->
+<?php include('includes/menulateralusuario.php') ?>
 <div class="header-advance-area">
     <nav class="header-top-area">
         <div class="container-fluid">
@@ -117,9 +141,9 @@ require_once "../../model/seguridad.php";
                                                                         <img src="img/contact/1.jpg" alt="">
                                                                     </div>
                                                                     <div class="message-content">
-                                                                        <span class="message-date">16 Sept</span>
-                                                                        <h2>Advanda Cro</h2>
-                                                                        <p>Please done this project as soon possible.</p>
+                                                                       <?php
+                                                                       perfil();
+                                                                       ?>
                                                                     </div>
                                                                 </a>
                                                             </li>
@@ -226,11 +250,13 @@ require_once "../../model/seguridad.php";
                                                     </div>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-                                                            <i class="fa fa-user adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
-                                                            <span class="admin-name">Advanda Cro</span>
-                                                            <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
+                                                    <a href="" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                        
+                                                    <i class="fa fa-user adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
+                                                                    <span class="admin-name">Advanda Cro</span>
+                                                                    <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
                                                         </a>
+                                                        <!-- <?php perfil(); ?> -->
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         <li><a href="register.html"><span class="fa fa-home author-log-ic"></span>Register</a>
                                                         </li>
@@ -527,9 +553,9 @@ require_once "../../model/seguridad.php";
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
                                                                                             <label class="onoffswitch-label" for="example">
-                                                                                                    <span class="onoffswitch-inner"></span>
-                                                                                                    <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -543,9 +569,9 @@ require_once "../../model/seguridad.php";
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
                                                                                             <label class="onoffswitch-label" for="example3">
-                                                                                                    <span class="onoffswitch-inner"></span>
-                                                                                                    <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -559,9 +585,9 @@ require_once "../../model/seguridad.php";
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
                                                                                             <label class="onoffswitch-label" for="example4">
-                                                                                                    <span class="onoffswitch-inner"></span>
-                                                                                                    <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -575,9 +601,9 @@ require_once "../../model/seguridad.php";
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
                                                                                             <label class="onoffswitch-label" for="example7">
-                                                                                                    <span class="onoffswitch-inner"></span>
-                                                                                                    <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -591,9 +617,9 @@ require_once "../../model/seguridad.php";
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
                                                                                             <label class="onoffswitch-label" for="example2">
-                                                                                                    <span class="onoffswitch-inner"></span>
-                                                                                                    <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -607,9 +633,9 @@ require_once "../../model/seguridad.php";
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example6">
                                                                                             <label class="onoffswitch-label" for="example6">
-                                                                                                    <span class="onoffswitch-inner"></span>
-                                                                                                    <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -623,9 +649,9 @@ require_once "../../model/seguridad.php";
                                                                                         <div class="onoffswitch">
                                                                                             <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example5">
                                                                                             <label class="onoffswitch-label" for="example5">
-                                                                                                    <span class="onoffswitch-inner"></span>
-                                                                                                    <span class="onoffswitch-switch"></span>
-                                                                                                </label>
+																									<span class="onoffswitch-inner"></span>
+																									<span class="onoffswitch-switch"></span>
+																								</label>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -646,7 +672,7 @@ require_once "../../model/seguridad.php";
                                     </div> -->
                 
                                 </div>              
-                            </div>
+                             </div>
                     </div>  
             </div>  
         </div>              
@@ -710,38 +736,15 @@ require_once "../../model/seguridad.php";
                                             </div>
                                         </div>
                                         
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-           
-
 <!-- Formulario de registro -->
-<div class="container-fluid-registro">
-    <div class="row">
-        
-         <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-            <div class="text-center custom-login mt-5px">
-                <h3 class="registro-usuario">LISTADO DE RUTAS</h3>
-                <!-- <p>Todos los campos son obligatorios</p> -->
-            </div>
-                    <div class="container fluid">
-                        <div class="datatable-dashv1-list custom-datatable-overright">
-                            <?php
-                        cargarRu();
-                            ?>
-                        </div>
-                        <div class="bienvenida">
-                        <button type="button" class="btn btn-primary" onClick='window.location.assign("registrarRutas.php")'>Crear Ruta</button>
-                        </div>
-                        
-                    </div>
-         </div>
-        </div>
-        <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div> -->
-    </div>
+<div class="bienvenida">
+    <h1>BIENVENIDO SUPERVISOR</h1>
 </div>
                 
 <?php

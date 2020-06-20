@@ -1,9 +1,7 @@
 <?php
 require_once "../../model/conexion.php";
 require_once "../../model/consulta.php";
-require_once "../../controller/admin/cargarRuta.php";
-require_once "../../controller/admin/verPerfil.php";
-require_once "../../model/seguridad.php";
+require_once "../../controller/admin/cargarUsuarioStandar.php";
 
 ?>
 <!doctype html>
@@ -70,7 +68,8 @@ require_once "../../model/seguridad.php";
     </head>
     <body>
         
-<?php include('../../includes/menulateralsuper.php') ?>
+        
+<?php include('../../includes/menulateralusuario.php') ?>
 
 
         <div class="header-advance-area">
@@ -640,6 +639,10 @@ require_once "../../model/seguridad.php";
                                                     </ul>
                                                 </div>
                                             </div>
+                                            <!-- <div class="info">
+                                                <a href="../../controller/cerrarSesion.php">CERRAR SESION</a>
+                                            </div> -->
+                        
                                         </div>              
                                     </div>
                             </div>  
@@ -719,71 +722,141 @@ require_once "../../model/seguridad.php";
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
         <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
             <div class="text-center custom-login mt-20px">
-                <h3 class="registro-usuario">REGISTRO DE RUTAS</h3>
+                <h3 class="registro-usuario">REGISTRO DE USUARIO</h3>
                 <p>Todos los campos son obligatorios</p>
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                    <form action="../../controller/admin/insertarRuta.php" id="loginForm" method="post" enctype="multipart/form-data">
+                    <form action="../../controller/admin/insertarUsuario.php" id="loginForm" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="form-group col-lg-12">
-                                <label>Id Ruta</label>
-                                <input type="number" name="id_ruta" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Destino</label>
-                                <input type="text" name="destino" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Fecha de Ruta</label>
-                                <input type="date" name="fecha_ruta" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Hora de Salida</label>
-                                <input type="date" name="hora_salida" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Hora de Llegada</label>
-                                <input type="date" name="hora_llegada" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Descripcion</label>
-                                <input type="text" name="descripcion" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Tipo de Ruta</label>
-                                <input type="text" name="tipo_ruta" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <label>Precinto</label>
-                                <input type="number" name="precinto" class="form-control" required>
-                            </div>
-                            <div class="form-group col-lg-12">
                                 <label>Identificacion</label>
-                                <input type="text" name="identificacion" class="form-control" required>
+                                <input type="number" name="identificacion" class="form-control" required>
                             </div>
                             <div class="form-group col-lg-12">
-                                <label>Placa</label>
-                                <input type="text" name="placa" class="form-control" required>
+                                <label>Nombre</label>
+                                <input type="text" name="nombre" class="form-control" required>
                             </div>
                             <div class="form-group col-lg-12">
-                                <label>Id Centro</label>
-                                <input type="number" name="id_centro" class="form-control" required>
+                                <label>Apellido</label>
+                                <input type="text" name="apellido" class="form-control" required>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label>Email</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label>Telefono</label>
+                                <input type="text" name="telefono" class="form-control" required>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label>Whatsapp</label>
+                                <input type="text" name="whatsapp" class="form-control" required>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label>Cargo</label>
+                                <!-- <input type="text" name="cargo" class="form-control"> -->
+                                <select class="form-control select2" name="cargo" required>
+                                    <option selected>Selecione su perfil</option>
+                                    <option value="supervisor">Supervisor</option>
+                                    <option value="coordinador">Coordinadora</option>
+                                    <option value="bodeguero">Bodeguero</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label>Fecha de ingreso</label>
+                                <input type="date" name="fecha_ingreso" class="form-control" required>
                             </div>
                             
+                            <div class="form-group col-lg-12">
+                                <label>Foto</label>
+                                <input type="file" name="foto" class="form-control" required>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label>Contraseña</label>
+                                <input type="password" name="pass" class="form-control" required>
+                            </div>
                         </div>
                         <div class="text-center">
                             <button class="btn btn-success loginbtn">REGISTRAR</button>
                             <button class="btn btn-default">Cancel</button>
                         </div>
                     </form>
+
+                    
+                   
                 </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
     </div>
+    <!-- link a la pagina del fabricante -->
+    <!-- <div class="row">
+        <div class="col-md-12 text-center">
+            <p>Copyright &copy; 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
+        </div>
+    </div> -->
 </div>
                 
 <?php
 require_once "../footer.php";
 ?>
+
+
+      </div>
+      
+    </>
+  </div>
+</header>
+
+
+
+
+    <!-- jquery
+		============================================ -->
+    <script src="js/vendor/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="js/metisMenu/metisMenu.min.js"></script>
+    <script src="js/metisMenu/metisMenu-active.js"></script>
+    <!-- tab JS
+		============================================ -->
+    <script src="js/tab.js"></script>
+    <!-- icheck JS
+		============================================ -->
+    <script src="js/icheck/icheck.min.js"></script>
+    <script src="js/icheck/icheck-active.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

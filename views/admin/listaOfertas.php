@@ -1,7 +1,7 @@
 <?php
 require_once "../../model/conexion.php";
 require_once "../../model/consulta.php";
-require_once "../../controller/admin/cargarProducto.php";
+require_once "../../controller/admin/cargarOferta.php";
 require_once "../../controller/admin/verPerfil.php";
 require_once "../../model/seguridad.php";
 
@@ -728,18 +728,17 @@ require_once "../../model/seguridad.php";
                 <!-- <p>Todos los campos son obligatorios</p> -->
             </div>
                     <div class="container fluid">
-                        <div class="datatable-dashv1-list custom-datatable-overright">
+                        <div class="panel-body">
                             <?php
-                        cargarPr();
+                        cargarOf();
                             ?>
                         </div>
                         <div class="bienvenida">
-                        <button type="button" class="btn btn-primary" onClick='window.location.assign("registrarProducto.php")'>REGISTRAR OFERTA</button>
+                        <button type="button" class="btn btn-primary" onClick='window.location.assign("registrarOferta.php")'>REGISTRAR OFERTA</button>
                         </div>
-                        
-                    </div>
-         </div>
-        </div>
+                    </div>  
+                 </div>
+                </div>
         <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div> -->
     </div>
 </div>

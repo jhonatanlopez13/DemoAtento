@@ -108,8 +108,8 @@
                                 <p class="help-block small">(if this is a private computer)</p>
                             </div>
                             <button class="btn btn-success btn-block loginbtn">Login</button>
-                            <a class="btn btn-default btn-block" href="../siltoFe-wapv/registrarlogin.php">Register</a>
                         </form>
+                        <a class="btn btn-default btn-block" href="indexUsuarioStandar.php">Register</a>
                     </div>
                 </div>
             </div>

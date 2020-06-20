@@ -1,7 +1,7 @@
 <?php
 require_once "../../model/conexion.php";
 require_once "../../model/consulta.php";
-require_once "../../controller/admin/cargarProductoEdit.php";
+require_once "../../controller/admin/cargarOferta.php";
 require_once "../../controller/admin/verPerfil.php";
 require_once "../../model/seguridad.php";
 
@@ -70,8 +70,9 @@ require_once "../../model/seguridad.php";
     </head>
     <body>
         
-        <?php include('../../includes/menulateralsuper.php') ?>
-        
+<?php include('../../includes/menulateralsuper.php') ?>
+
+
         <div class="header-advance-area">
             <nav class="header-top-area">
                 <div class="container-fluid">
@@ -639,10 +640,6 @@ require_once "../../model/seguridad.php";
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <!-- <div class="info">
-                                                <a href="../../controller/cerrarSesion.php">CERRAR SESION</a>
-                                            </div> -->
-                        
                                         </div>              
                                     </div>
                             </div>  
@@ -715,28 +712,46 @@ require_once "../../model/seguridad.php";
             </div>
         </div>
 
-<!-- Formulario de Editar -->
-<div class="container-fluid-registro">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
-                <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="text-center custom-login">
-                        <h3 class="editar-usuario">EDITAR Ruta</h3>
-                        <p>Todos los campos son obligatorios</p>
-                    </div>
-                    <div class="hpanel">
-                        <div class="panel-body">
-                            <?php
-                            cargarProductoEditar();
-                            ?>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
 
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
-        </div>       
+<!-- Formulario de registro -->
+<div class="container-fluid-registro">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+        <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="text-center custom-login mt-20px">
+                <h3 class="registro-usuario">REGISTRO DE OFERTAS</h3>
+                <p>Todos los campos son obligatorios</p>
+            </div>
+            <div class="hpanel">
+                <div class="panel-body">
+                    <form action="../../controller/admin/insertarOferta.php" id="loginForm" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <!-- <div class="form-group col-lg-12">
+                                <label>ID OFERTA</label>
+                                <input type="number" name="id_producto" class="form-control" required>
+                            </div> -->
+                            <div class="form-group col-lg-12">
+                                <label>OFERTA</label>
+                                <input type="text" name="nombre" class="form-control" required>
+                            </div>
+                            <!-- <div class="form-group col-lg-12">
+                                <label>Peso</label>
+                                <input type="number" name="peso" class="form-control" required>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label>Costo</label>
+                                <input type="number" name="costo" class="form-control" required>
+                            </div>    -->
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-success loginbtn">REGISTRAR</button>
+                            <button class="btn btn-default">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
     </div>
 </div>
                 
