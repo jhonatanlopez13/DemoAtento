@@ -10,10 +10,16 @@ require_once "../../model/seguridad.php";
 <html class="no-js" lang="es">
 
     <head>
+<<<<<<< HEAD
        
     <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>ATENTO COLOMBIA</title>
+=======
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>SILTO</title>
+>>>>>>> cccbab4d827f9f1a8d339fedf835449cf7d49eaf
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- favicon
@@ -62,7 +68,10 @@ require_once "../../model/seguridad.php";
         <!-- style CSS
             ============================================ -->
         <link rel="stylesheet" href="../../css/style.css">
+<<<<<<< HEAD
         <link rel="stylesheet" href="../../css/style2.css">
+=======
+>>>>>>> cccbab4d827f9f1a8d339fedf835449cf7d49eaf
         <!-- responsive CSS
             ============================================ -->
         <link rel="stylesheet" href="../../css/responsive.css">
@@ -72,6 +81,7 @@ require_once "../../model/seguridad.php";
     </head>
     <body>
         
+<<<<<<< HEAD
         
 <?php include ('../../includes/menulateralsuper.php') ?>
 
@@ -214,6 +224,9 @@ require_once "../../model/seguridad.php";
     <body>
         
         <?php include('../../includes/menulateralsuper.php') ?>
+=======
+        <?php include('../../includes/menulateralsupercliente.php') ?>
+>>>>>>> cccbab4d827f9f1a8d339fedf835449cf7d49eaf
         
         <div class="header-advance-area">
             <nav class="header-top-area">
