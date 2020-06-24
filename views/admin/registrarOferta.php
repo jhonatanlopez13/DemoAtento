@@ -8,9 +8,8 @@ require_once "../../model/seguridad.php";
 ?>
 <!doctype html>
 <html class="no-js" lang="es">
-
+<?php include ('../../includes/menulateralsuper.php') ?>
     <head>
- 
     <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>ATENTO COLOMBIA</title>
@@ -69,13 +68,6 @@ require_once "../../model/seguridad.php";
         <!-- modernizr JS
             ============================================ -->
         <script src="../../js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        
-        
-<?php include ('../../includes/menulateralsuper.php') ?>
-
-
         <div class="header-advance-area">
             <nav class="header-top-area">
                 <div class="container-fluid">
@@ -210,10 +202,10 @@ require_once "../../model/seguridad.php";
                 </div>
             </div>
         </div>
-    </head>
+   </head>
     <body>
         
-<?php include('../../includes/menulateralsuper.php') ?>
+
 
 
         
