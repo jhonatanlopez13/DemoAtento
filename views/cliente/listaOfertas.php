@@ -5,11 +5,11 @@ require_once "../../controller/admin/cargarOferta.php";
 require_once "../../controller/admin/verPerfil.php";
 require_once "../../model/seguridad.php";
 
-?><!doctype html>
+?>
+<!doctype html>
 <html class="no-js" lang="es">
-<?php include ('../../includes/menulateralsuper.php') ?>
+<?php include ('../../includes/cliente.php') ?>
     <head>
-       
     <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>ATENTO COLOMBIA</title>

@@ -5,11 +5,11 @@ require_once "../../controller/admin/cargarUsuario.php";
 require_once "../../controller/admin/verPerfil.php";
 require_once "../../model/seguridad.php";
 
-?><!doctype html>
+?>
+<!doctype html>
 <html class="no-js" lang="es">
-<?php include ('../../includes/menulateralsuper.php') ?>
+<?php include ('../../includes/cliente.php') ?>
     <head>
-       
     <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>ATENTO COLOMBIA</title>
@@ -202,7 +202,6 @@ require_once "../../model/seguridad.php";
                 </div>
             </div>
         </div>
-
 <!-- Formulario de Editar -->
 <div class="container-fluid-registro">
         <div class="row">
